@@ -2,8 +2,88 @@
 <html>
 	<head>
 		<title>Maria Chau</title>
+		<style>
+		body {
+			font-family: Arial;
+		}
+		
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		p#hello {
+			text-align: center;
+			color: black;
+		}
+		
+		p#trees {
+    		text-align: center;
+    		color: green;
+    		display: none;
+		}
+		
+		.title-change {
+    		color: #FF3388;
+		}
+		
+		.bonsaiImageCaptions {
+			display: block;
+			box-shadow: 0px 1px 5px #052a4d;
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.caption {
+    		position:absolute;
+    		background: rgba(0,0,0,0.5);
+    		color:#ffffff;
+    		text-align:center;
+    		bottom:-83px;
+    		transition: all 0.5s; 
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%
+		}		
+
+		.bonsaiImageCaptions:hover .caption
+		{
+			bottom:0px;    
+		}
+		
+		footer {
+			text-align: center;
+			color: green;
+			padding-top: 20px;
+		}
+		
+		
+		</style>
+		<script>
+		window.onload=function(){
+			var title=document.getElementById("hello");
+			title.addEventListener("mouseover", function () {
+				title.classList.add("title-change");
+				document.querySelector("#trees").style.display="block";
+			});
+			
+			
+		};
+		</script>
 	</head>
 	<body>
-		Whoa!
+		
+		<p id="hello">Hello! Hover over this text!</p>
+		
+		<p id="trees">I love trees.</p>
+		<div class="bonsaiImageCaptions">
+			<div class="mainGalleryImage">
+				<img src="bonsaiGalleryImage.png" alt="Tigerbark Banyan Bonsai" />
+			</div>
+			<div class="caption">
+				<p>Tigerbark Banyan by <a href="https://www.flickr.com/photos/bonsaihiker/3998209753/in/set-72157604545830863">bonsaihiker </a>via Flickr</p>
+			</div>
+		</div>
+		<footer> &copy 2014 Maria Luisa Chau</footer>
 	</body>
 </html>
