@@ -2,8 +2,66 @@
 <html>
 	<head>
 		<title>First page</title>
-	</head>
+		
+<script src="http:////cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<style>
+
+body{		
+font: verenda;
+background-image: url('blue-background.jpg');
+background-size:100%;
+}
+
+
+h1{
+font-size: 35px;
+color: white;
+text-decoration: underline;
+text-align:center;
+}
+
+p{
+font-size: 25px;
+color: white;
+text-align: center;
+}
+
+.photo img{
+  
+border: 2px solid;
+border-radius: 100px;
+
+}
+
+
+
+</style>	
+
+
+	<script>
+			$(document).ready(function() {
+				$('.black-background').click(function() {
+					$('body').addClass('black');
+					$(this).remove();
+					return false;
+				});
+			});
+		</script>
+
+</head>
+	
 	<body>
-		Testing!
+		
+		
+		<div class = photo align = center> <img src='jason.jpg'> </div>
+		<div align = center ><a href="http://blog.hostbaby.com/wp-content/uploads/2013/07/scuffedstatic_dark1400x900.jpg" class="black-background">See Black!</a></div>
+		<h1> First Class Assignment </h1>
+		
+		<p> This webpage is to showcase what I have learned in web development thus far! Hopefully this class will help me
+		to learn more and build upon what I have already learned in previous classes.<p> 
+		
+	
+		
+		
 	</body>
 </html>
