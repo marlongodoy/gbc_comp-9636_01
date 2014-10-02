@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student List</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+<script src="script.js"></script>
+
+<head>
+<body>
+	<div class="container" ng-app="studentApp">
+		<h1>Student List</h1>
+		<div ng-controller="StudentsController">
+		<form ng-submit="addStudent()">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Twiter Username</th>
+			</tr>
+			
+		</thead>
+	<tbody>
+		<tr ng-repeat="student in students">
+			<td>
+				{{student.index}}
+			</td>
+			<td class="wide">
+				{{student.first_name}}
+			</td>
+			<td class="wide">
+				{{student.last_name}}
+			</td>
+			<td class="wide">
+				{{student.twitter_username}}
+			</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td>
+				<input type="Submit" value="add" class="btn btn-primary">
+			</td>
+			<td>
+				<input ng-model="first_name" type="text" class="form-control" placeholder="First Name">
+			</td>
+			<td>
+				<input ng-model="last_name" type="text" class="form-control" placeholder="Last Name">
+				
+			</td>
+			<td>
+				<div class="input-group">
+					<span class="input-group-addon">@</span>
+					<input ng-model="twitter_username" type="text" class="form-control" placeholder="Twitter Username">
+				</div>
+			</td>
+		</tr>
+	</tfoot>
+</table>
+</form>
+			</div>
+</html>
