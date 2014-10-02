@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app>
+  <head>
+  <title>Angular JS | Exercise 1</title>
+  <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.2/angular.min.js"></script>
+  </head>
+  <body>
+    <div class="field">
+      <label>First Name:</label>
+      <input type="text" ng-model="yourFirstName" placeholder="Enter your First name here">
+	  <br>
+	  <label>Last Name:</label>
+      <input type="text" ng-model="yourLastName" placeholder="Enter your Last name here">
+	  <hr>
+      <h1>Hello {{yourFirstName + " " + yourLastName}}!</h1>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+body {background: #D1FFFF;}
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
