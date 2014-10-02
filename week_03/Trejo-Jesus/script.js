@@ -25,9 +25,11 @@ angular.module('studentApp', []).controller('StudentsController', ['$scope', fun
 
 
 
-		$scope.removeStudent = function(){
-			console.log('remove Student')
-		}
+		$scope.removeStudent = function(student){
+			var arrayIndex = $scope.students.indexOf(student);
+			$scope.students.splice(arrayIndex,1);
+			console.log(student);
+		};
 }]);
 
 
