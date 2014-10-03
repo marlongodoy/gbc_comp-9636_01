@@ -31,7 +31,6 @@ angular.module('studentApp', []).controller('StudentsController', ['$scope', fun
 
 		$scope.students.forEach(function(student, i){
 		 student.number= i + 1;
-		
 			console.log(student,i);
 		});
 				localStorage.setItem('students', JSON.stringify($scope.students));
