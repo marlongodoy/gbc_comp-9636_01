@@ -3,13 +3,13 @@ angular.module('studentApp', []).controller('StudentsController', ['$scope', fun
 		first_name:'Jesus',
 		last_name: 'Trejo',
 		twitter_username:'JTVEN36',
-		index:1,
+		number:1,
 	}];
 
 		$scope.addStudent = function() {
 			console.log($scope.first_name);
 			$scope.students.push({
-				index: $scope.students.length + 1,
+				number: $scope.students.length + 1,
 				first_name: $scope.first_name,
 				last_name: $scope.last_name,
 				twitter_username: $scope.twitter_username,
@@ -23,13 +23,17 @@ angular.module('studentApp', []).controller('StudentsController', ['$scope', fun
 
 		}
 
-
-
 		$scope.removeStudent = function(student){
 			var arrayIndex = $scope.students.indexOf(student);
-			$scope.students.splice(arrayIndex,1);
-			console.log(student);
-		};
+			$scope.students.splice(arrayIndex, 1);
+			
+			$scope.students.forEach(function(student, i){
+				student.number = i + 1;
+				
+			});
+
+			localStorage.setItem('students', JSON.stringify($scope.students));
+	};	
 }]);
 
 
